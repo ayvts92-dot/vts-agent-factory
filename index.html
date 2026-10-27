@@ -139,6 +139,81 @@ h2{font-size:clamp(1.9rem,6vw,3rem);margin-bottom:14px}
 .panel h3{font-size:1.3rem;margin:20px 0 6px}
 .panel p{color:var(--muted);max-width:60ch}
 
+
+/* product videos */
+.vid{position:relative;overflow:hidden;background:#000}
+.vid video{display:block;width:100%;height:auto;background:#000}
+.vplay{display:none;position:absolute;inset:0;margin:auto;width:64px;height:64px;border-radius:50%;border:1px solid rgba(255,255,255,.3);background:rgba(11,12,14,.65);cursor:pointer;place-items:center;z-index:2}
+.vplay svg{width:24px;height:24px;fill:#fff}
+.vid.manual .vplay{display:grid}
+.vid.manual.started .vplay{display:none}
+.float-card{position:absolute;left:0;bottom:3%;width:47%;z-index:2;border-radius:16px;border:1px solid rgba(46,200,242,.4);box-shadow:0 20px 50px -18px rgba(0,0,0,.9),0 0 40px -12px rgba(46,200,242,.45);animation:float 6s ease-in-out infinite}
+.float-card .vplay{width:44px;height:44px}
+@keyframes float{50%{transform:translateY(-10px)}}
+.badge{position:absolute;top:8px;left:8px;z-index:3;display:flex;align-items:center;gap:6px;padding:4px 9px;border-radius:999px;background:rgba(11,12,14,.78);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);border:1px solid rgba(34,197,94,.45);font:700 .62rem/1 var(--body);letter-spacing:.1em;color:#4ade80}
+.badge i{width:7px;height:7px;border-radius:50%;background:#22c55e;box-shadow:0 0 0 0 rgba(34,197,94,.7);animation:ping 1.8s infinite}
+@keyframes ping{70%{box-shadow:0 0 0 7px rgba(34,197,94,0)}100%{box-shadow:0 0 0 0 rgba(34,197,94,0)}}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* showcase stages */
+.stage.media,.stage.live{display:block;padding:0;border:1px solid var(--line);overflow:hidden;position:relative;text-align:left;aspect-ratio:auto;min-height:0}
+.stage.media{background:#000}
+.demo-tag{position:absolute;top:10px;right:10px;z-index:3;padding:4px 10px;border-radius:999px;background:rgba(11,12,14,.75);border:1px solid var(--line);font:600 .66rem/1.2 var(--body);letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+@media(min-width:760px){
+  .stage.media,.stage.live{aspect-ratio:16/10;max-width:860px}
+  .stage.media .vid,.stage.media video{height:100%}
+  .stage.media video{object-fit:contain}
+}
+
+/* chat demo */
+.chat{display:flex;flex-direction:column;width:100%;height:440px;background:#0e1013}
+@media(min-width:760px){.chat{height:100%}}
+.chat-head{display:flex;align-items:center;gap:12px;padding:12px 16px;background:#14171c;border-bottom:1px solid var(--line)}
+.av{width:36px;height:36px;border-radius:50%;background:var(--grad);display:grid;place-items:center;font:700 .95rem var(--head);color:#fff}
+.chat-head b{display:block;font-size:.95rem;line-height:1.2}
+.chat-head small{color:#4ade80;font-size:.74rem}
+.chat-body{flex:1;overflow:hidden;display:flex;flex-direction:column;justify-content:flex-end;gap:8px;padding:14px 16px}
+.msg{max-width:82%;padding:9px 13px;border-radius:14px;font-size:.92rem;line-height:1.4;animation:pop .35s ease both}
+.msg.c{align-self:flex-end;background:#1d3b36;border-bottom-right-radius:4px}
+.msg.a{align-self:flex-start;background:#1b1e25;border:1px solid var(--line);border-bottom-left-radius:4px}
+.typing{display:flex;gap:4px;padding:12px 14px}
+.typing i{width:7px;height:7px;border-radius:50%;background:var(--muted);animation:blink 1s infinite}
+.typing i:nth-child(2){animation-delay:.15s}.typing i:nth-child(3){animation-delay:.3s}
+@keyframes blink{0%,80%,100%{opacity:.25}40%{opacity:1}}
+@keyframes pop{from{opacity:0;transform:translateY(8px) scale(.97)}to{opacity:1;transform:none}}
+.quote{min-width:200px}
+.quote b{display:block;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--cyan);margin-bottom:4px}
+.quote div{font-size:.88rem}
+.quote .tot{margin-top:6px;padding-top:6px;border-top:1px dashed rgba(255,255,255,.2);color:var(--muted)}
+.crm{align-self:stretch;max-width:none;border-radius:14px;padding:12px 14px;background:linear-gradient(#10151a,#10151a) padding-box,var(--grad) border-box;border:1px solid transparent;animation:pop .45s ease both}
+.crm-h{display:flex;align-items:center;gap:8px;font:700 .95rem var(--head);margin-bottom:8px}
+.crm-h i{width:20px;height:20px;border-radius:50%;background:#22c55e;display:grid;place-items:center;font-style:normal;font-size:.7rem;color:#04210f}
+.crm dl{display:grid;grid-template-columns:auto 1fr;gap:3px 12px;font-size:.84rem}
+.crm dt{color:var(--muted)}
+.chat-input{display:flex;align-items:center;gap:10px;margin:0 12px 12px;padding:10px 14px;border-radius:999px;background:#14171c;border:1px solid var(--line);font-size:.9rem;min-height:42px}
+.chat-input span{flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:clip}
+.chat-input span:empty::before{content:"Type a message";color:#5d626c}
+.chat-input span:not(:empty)::after{content:"";display:inline-block;width:1px;height:1em;background:var(--cyan);margin-left:2px;vertical-align:-2px;animation:blink 1s infinite}
+
+/* kitchen board */
+.kitchen{width:100%;height:370px;padding:44px 14px 14px;background:#0e1013;position:relative}
+@media(min-width:760px){.kitchen{height:100%;padding:52px 20px 20px}}
+.kcols{position:absolute;inset:44px 14px 14px;display:grid;grid-template-columns:repeat(3,1fr);gap:2.2%}
+@media(min-width:760px){.kcols{inset:52px 20px 20px}}
+.kcol{border-radius:14px;background:rgba(255,255,255,.03);border:1px solid var(--line);padding:10px;font:600 .74rem/1.2 var(--body);letter-spacing:.06em;text-transform:uppercase;color:var(--muted);display:flex;justify-content:space-between;gap:6px;align-items:flex-start}
+.kcol em{font-style:normal;color:var(--cyan)}
+.kboard{position:absolute;inset:44px 14px 14px;pointer-events:none}
+@media(min-width:760px){.kboard{inset:52px 20px 20px}}
+.ko{position:absolute;left:0;top:0;width:31.9%;height:70px;margin-top:38px;padding:9px 10px;border-radius:11px;background:#1a1d24;border:1px solid rgba(255,255,255,.12);font-size:.8rem;line-height:1.3;
+  transform:translate(calc(var(--c)*106.9%),calc(var(--r)*80px));transition:transform .7s cubic-bezier(.3,.7,.2,1),opacity .5s,border-color .5s;animation:kin .5s ease both}
+@keyframes kin{from{opacity:0}}
+.ko b{display:block;font-family:var(--head);font-size:.86rem}
+.ko span{color:var(--muted);font-size:.74rem}
+.ko[data-c="1"]{border-color:rgba(232,176,60,.0);border-color:rgba(46,200,242,.5)}
+.ko[data-c="2"]{border-color:rgba(123,92,240,.7)}
+.ko.gone{opacity:0}
+@media(min-width:760px){.ko{height:76px;padding:11px 13px;font-size:.88rem;transform:translate(calc(var(--c)*106.9%),calc(var(--r)*88px))}}
+
 /* ways */
 .ways{display:grid;gap:14px;margin-top:40px}
 @media(min-width:760px){.ways{grid-template-columns:1fr 1fr}}
@@ -216,8 +291,13 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-con
           <a class="btn btn-ghost" href="#agents">See our agents</a>
         </div>
       </div>
-      <div class="factory fade" style="--d:.5" role="img" aria-label="Animation: tasks like email, invoices, leads, calls and orders flow into an AI core, which sends results out to a network of agents.">
-        <canvas id="factory"></canvas>
+      <div class="factory fade" style="--d:.5"><span class="sr">Animation: tasks like email, invoices, leads, calls and orders flow into an AI core, which sends results out to a network of agents.</span>
+        <canvas id="factory" aria-hidden="true"></canvas>
+        <div class="float-card vid">
+          <span class="badge"><i></i>AGENT ONLINE</span>
+          <video muted loop playsinline preload="none" poster="assets/robot.webp" width="960" height="540" data-src="assets/robot.mp4" aria-label="An AI agent robot at work"></video>
+          <button class="vplay" type="button" aria-label="Play video"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button>
+        </div>
       </div>
     </div>
     <div class="stats fade" style="--d:1">
@@ -285,7 +365,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-con
   <div class="wrap">
     <span class="eyebrow">Showcase</span>
     <h2>See the agents in action.</h2>
-    <p class="lead">Demo videos are on the way. Pick a tab to preview what each one does.</p>
+    <p class="lead">Pick a tab to see what each agent does. The chat and order board are demo data.</p>
 
     <div class="tabs" role="tablist" aria-label="Agent demos">
       <button class="tab" role="tab" id="t1" aria-controls="p1" aria-selected="true">AI Receptionist</button>
@@ -295,19 +375,30 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-con
     </div>
 
     <div class="panel" role="tabpanel" id="p1" aria-labelledby="t1">
-      <div class="stage"><div><div class="play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div><small>Demo video coming soon</small></div></div>
+      <div class="stage media"><div class="vid"><video muted loop playsinline preload="none" poster="assets/receptionist.webp" width="720" height="654" data-src="assets/receptionist.mp4" aria-label="AI Receptionist demo"></video><button class="vplay" type="button" aria-label="Play video"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button></div></div>
       <h3>AI Receptionist</h3><p>Picks up every call, answers questions and books the appointment while your team stays focused.</p>
     </div>
     <div class="panel" role="tabpanel" id="p2" aria-labelledby="t2" hidden>
-      <div class="stage"><div><div class="play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div><small>Demo video coming soon</small></div></div>
+      <div class="stage media"><div class="vid"><video muted loop playsinline preload="none" poster="assets/inbox.webp" width="720" height="440" data-src="assets/inbox.mp4" aria-label="Inbox Assistant demo"></video><button class="vplay" type="button" aria-label="Play video"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button></div></div>
       <h3>Inbox Assistant</h3><p>Reads, sorts and drafts so your inbox stops being a second job.</p>
     </div>
     <div class="panel" role="tabpanel" id="p3" aria-labelledby="t3" hidden>
-      <div class="stage"><div><div class="play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div><small>Demo video coming soon</small></div></div>
+      <div class="stage live"><span class="demo-tag">Demo conversation</span>
+        <div class="chat" id="chat">
+          <div class="chat-head"><span class="av">V</span><div><b>VTS Lead Agent</b><small>● online</small></div></div>
+          <div class="chat-body" aria-hidden="true"></div>
+          <div class="chat-input" aria-hidden="true"><span></span></div>
+          <p class="sr">Demo: a customer asks for 40 lunch boxes for Friday in Clifton. The agent asks about dietary needs, sends a quote, and the qualified lead is saved to the CRM.</p>
+        </div></div>
       <h3>WhatsApp Lead Bot</h3><p>Replies to new leads in seconds, asks the right questions and hands warm leads to your team.</p>
     </div>
     <div class="panel" role="tabpanel" id="p4" aria-labelledby="t4" hidden>
-      <div class="stage"><div><div class="play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div><small>Demo video coming soon</small></div></div>
+      <div class="stage live"><span class="demo-tag">Demo data</span>
+        <div class="kitchen" id="kitchen">
+          <div class="kcols" aria-hidden="true"><div class="kcol">New <em></em></div><div class="kcol">Cooking <em></em></div><div class="kcol">Out for delivery <em></em></div></div>
+          <div class="kboard" aria-hidden="true"></div>
+          <p class="sr">Demo data: a live order board where orders move from New to Cooking to Out for delivery.</p>
+        </div></div>
       <h3>Kitchen OS</h3><p>An agent-powered operating layer for kitchens and food businesses.</p>
     </div>
   </div>
@@ -435,6 +526,105 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-con
   progress();
   addEventListener('scroll',progress,{passive:true});
   addEventListener('resize',progress);
+
+
+  /* Lazy product videos: load and play only while visible */
+  var conn=navigator.connection||{};
+  var manual=reduce||conn.saveData||/(^|-)2g$/.test(conn.effectiveType||'');
+  var vids=[].slice.call(document.querySelectorAll('.vid video'));
+  function loadVid(v){if(!v.getAttribute('src')){v.src=v.getAttribute('data-src');v.load()}}
+  vids.forEach(function(v){
+    var box=v.parentNode,btn=box.querySelector('.vplay');
+    if(manual)box.classList.add('manual');
+    btn.addEventListener('click',function(){loadVid(v);v.controls=true;box.classList.add('started');v.play().catch(function(){})});
+  });
+  var started=false;
+  function arm(){
+    if(started)return;started=true;
+    if(!('IntersectionObserver' in window))return;
+    var vio=new IntersectionObserver(function(es){
+      es.forEach(function(e){
+        var v=e.target;
+        if(e.isIntersecting&&!document.hidden){
+          if(manual)return;
+          loadVid(v);var pr=v.play();if(pr&&pr.catch)pr.catch(function(){});
+        }else v.pause();
+      });
+    },{threshold:.25});
+    vids.forEach(function(v){vio.observe(v)});
+    document.addEventListener('visibilitychange',function(){if(document.hidden)vids.forEach(function(v){v.pause()})});
+  }
+  if(document.readyState==='complete')setTimeout(arm,200);else addEventListener('load',function(){setTimeout(arm,200)});
+
+  /* Live demos run only while on screen */
+  function watch(el,on,off){
+    if(!('IntersectionObserver' in window)){on();return}
+    new IntersectionObserver(function(es){es[0].isIntersecting?on():off()},{threshold:.2}).observe(el);
+  }
+
+  /* WhatsApp lead bot: a chat that types itself */
+  var chat=document.getElementById('chat');
+  if(chat){
+    var cbody=chat.querySelector('.chat-body'),cinp=chat.querySelector('.chat-input span'),ctok=0;
+    var cscript=[['c','Hi! Do you do lunch boxes for offices?'],['a','Hi, yes we do! How many boxes do you need, and for which day?'],['c','40 lunch boxes for Friday, delivery to Clifton'],['a','Got it. Any dietary needs? And is this a one-off or weekly?'],['c','One-off. 5 of them vegetarian'],['a','Noted: 40 boxes (5 vegetarian), Friday, Clifton. Sending your quote now.'],['q'],['crm']];
+    var QUOTE='<div class="quote"><b>Quote</b><div>40 × lunch box (5 vegetarian)</div><div>Delivery: Clifton, Friday</div><div class="tot">Total: from your price list</div></div>';
+    var CRM='<div class="crm-h"><i>✓</i>Qualified lead → CRM</div><dl><dt>Need</dt><dd>40 lunch boxes (5 veg)</dd><dt>When</dt><dd>Friday</dd><dt>Where</dt><dd>Clifton</dd><dt>Status</dt><dd>Quote sent</dd></dl>';
+    var cadd=function(cls,html){var d=document.createElement('div');d.className=cls;d.innerHTML=html;cbody.appendChild(d);cbody.scrollTop=cbody.scrollHeight;return d};
+    var csleep=function(ms,t){return new Promise(function(ok,no){setTimeout(function(){t===ctok?ok():no()},ms)})};
+    var chtml=function(it){return it[0]==='q'?['msg a',QUOTE]:it[0]==='crm'?['crm',CRM]:['msg '+it[0],it[1]]};
+    var crun=async function(t){
+      try{
+        while(t===ctok){
+          cbody.innerHTML='';cinp.textContent='';
+          await csleep(600,t);
+          for(var i=0;i<cscript.length;i++){
+            var it=cscript[i];
+            if(it[0]==='c'){
+              for(var k=1;k<=it[1].length;k++){cinp.textContent=it[1].slice(0,k);await csleep(32,t)}
+              await csleep(280,t);cinp.textContent='';cadd.apply(null,chtml(it));
+            }else if(it[0]==='crm'){await csleep(900,t);cadd.apply(null,chtml(it))}
+            else{var ty=cadd('msg a typing','<i></i><i></i><i></i>');await csleep(it[0]==='q'?1100:900,t);ty.remove();cadd.apply(null,chtml(it))}
+            await csleep(550,t);
+          }
+          await csleep(5500,t);
+        }
+      }catch(e){}
+    };
+    if(reduce){cscript.forEach(function(it){cadd.apply(null,chtml(it))});cbody.querySelectorAll('.msg,.crm').forEach(function(m){m.style.animation='none'})}
+    else watch(chat,function(){ctok++;crun(ctok)},function(){ctok++});
+  }
+
+  /* Kitchen OS: live order board */
+  var kit=document.getElementById('kitchen');
+  if(kit){
+    var kb=kit.querySelector('.kboard'),kc=kit.querySelectorAll('.kcol em'),ords=[],oid=101,ktick=0,ktimer=null;
+    var kitems=['Biryani ×2','Karahi ×1, naan ×4','Lunch box ×40','Burger combo ×3','Daal chawal ×2','Seekh kebab ×6'];
+    var klayout=function(){
+      var n=[0,0,0];
+      ords.forEach(function(o){o.el.style.setProperty('--c',o.c);o.el.style.setProperty('--r',n[o.c]++);o.el.dataset.c=o.c});
+      for(var i=0;i<3;i++)kc[i].textContent=n[i]?n[i]:'';
+    };
+    var kcount=function(c){return ords.filter(function(o){return o.c===c}).length};
+    var koldest=function(c){return ords.filter(function(o){return o.c===c})[0]};
+    var kadd=function(c){
+      var el=document.createElement('div');el.className='ko';
+      el.innerHTML='<b>#'+(oid++)+'</b><span>'+kitems[Math.floor(Math.random()*kitems.length)]+'</span>';
+      kb.appendChild(el);ords.push({c:c,el:el});klayout();
+    };
+    var kstep=function(){
+      ktick++;
+      if(kcount(2)>=3){var o=koldest(2);o.el.classList.add('gone');ords.splice(ords.indexOf(o),1);setTimeout(function(){o.el.remove()},550)}
+      if(kcount(1)>=2||(kcount(1)&&ktick%2)){koldest(1).c=2}
+      if(kcount(0)&&kcount(1)<3){koldest(0).c=1}
+      if(kcount(0)<2&&ktick%2===0)kadd(0);
+      klayout();
+    };
+    if(reduce){kadd(0);kadd(1);kadd(2);kadd(0);kit.querySelectorAll('.ko').forEach(function(e){e.style.animation='none'})}
+    else{
+      kadd(0);kadd(1);kadd(2);
+      watch(kit,function(){if(!ktimer)ktimer=setInterval(kstep,2300)},function(){clearInterval(ktimer);ktimer=null});
+    }
+  }
 
   /* Hero canvas: the agent factory */
   var cv=document.getElementById('factory');
