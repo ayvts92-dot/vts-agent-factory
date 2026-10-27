@@ -46,11 +46,12 @@ h2{font-size:clamp(1.9rem,6vw,3rem);margin-bottom:14px}
 .nav{position:fixed;top:12px;left:50%;transform:translateX(-50%);z-index:50;width:calc(100% - 24px);max-width:900px;
   display:flex;align-items:center;justify-content:space-between;gap:12px;padding:8px 8px 8px 14px;
   background:rgba(18,19,23,.72);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid var(--line);border-radius:999px}
-.brand{display:flex;align-items:center;gap:10px;font-family:var(--head);font-weight:700;letter-spacing:.04em}
+.brand{min-height:44px;display:flex;align-items:center;gap:10px;font-family:var(--head);font-weight:700;letter-spacing:.04em}
 .brand img{width:32px;height:32px;border-radius:8px}
 .nav ul{display:none;list-style:none;gap:26px;font-size:.92rem;color:var(--muted)}
+.nav ul a{display:inline-block;padding:11px 4px}
 .nav ul a:hover{color:var(--text)}
-.nav .btn{min-height:40px;padding:8px 16px;font-size:.88rem;white-space:nowrap}
+.nav .btn{min-height:44px;padding:8px 16px;font-size:.88rem;white-space:nowrap}
 @media(min-width:760px){.nav ul{display:flex}.nav{padding-left:18px}}
 
 /* hero */
