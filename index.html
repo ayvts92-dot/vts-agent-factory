@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Vintage Tech Solutions | AI Agent Factory in Karachi</title>
+<meta name="description" content="Vintage Tech Solutions (VTS) is an AI Agent Factory in Karachi. We build AI agents that handle leads, calls, inboxes, finance and ops for your business.">
+<meta name="theme-color" content="#0B0C0E">
+<link rel="icon" href="assets/vts-mark-96.webp" type="image/webp">
+<link rel="preload" href="assets/Syne.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/SpaceGrotesk.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+@font-face{font-family:"Syne";src:url(assets/Syne.woff2) format("woff2");font-weight:400 800;font-display:swap}
+@font-face{font-family:"Space Grotesk";src:url(assets/SpaceGrotesk.woff2) format("woff2");font-weight:300 700;font-display:swap}
+:root{
+  --bg:#0B0C0E;--bg2:#121317;--card:#15171c;--line:rgba(255,255,255,.09);
+  --text:#EDEEF0;--muted:#9a9ea8;
+  --cyan:#2EC8F2;--violet:#7B5CF0;--orange:#E85D20;
+  --grad:linear-gradient(120deg,#2EC8F2,#7B5CF0);
+  --head:"Syne",system-ui,sans-serif;--body:"Space Grotesk",system-ui,sans-serif;
+  --r:18px;--gut:20px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:84px;-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--text);font:400 16px/1.6 var(--body);overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+h1,h2,h3{font-family:var(--head);line-height:1.1;font-weight:700;letter-spacing:-.01em}
+.wrap{width:100%;max-width:1120px;margin:0 auto;padding:0 var(--gut)}
+section{padding:72px 0;position:relative}
+.eyebrow{display:inline-block;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;font-weight:600;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;margin-bottom:14px}
+h2{font-size:clamp(1.9rem,6vw,3rem);margin-bottom:14px}
+.lead{color:var(--muted);max-width:56ch;font-size:1.05rem}
+.grad{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+:focus-visible{outline:2px solid var(--cyan);outline-offset:3px;border-radius:6px}
+
+/* buttons: orange only here */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:12px 24px;border-radius:999px;font:600 .98rem var(--body);border:1px solid transparent;cursor:pointer;transition:transform .2s,box-shadow .2s,background .2s;text-align:center}
+.btn-primary{background:var(--orange);color:#fff;box-shadow:0 8px 28px -10px rgba(232,93,32,.7)}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 32px -8px rgba(232,93,32,.85)}
+.btn-ghost{background:transparent;color:var(--text);border-color:rgba(255,255,255,.22)}
+.btn-ghost:hover{border-color:var(--cyan);color:var(--cyan)}
+
+/* nav */
+.nav{position:fixed;top:12px;left:50%;transform:translateX(-50%);z-index:50;width:calc(100% - 24px);max-width:900px;
+  display:flex;align-items:center;justify-content:space-between;gap:12px;padding:8px 8px 8px 14px;
+  background:rgba(18,19,23,.72);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid var(--line);border-radius:999px}
+.brand{display:flex;align-items:center;gap:10px;font-family:var(--head);font-weight:700;letter-spacing:.04em}
+.brand img{width:32px;height:32px;border-radius:8px}
+.nav ul{display:none;list-style:none;gap:26px;font-size:.92rem;color:var(--muted)}
+.nav ul a:hover{color:var(--text)}
+.nav .btn{min-height:40px;padding:8px 16px;font-size:.88rem;white-space:nowrap}
+@media(min-width:760px){.nav ul{display:flex}.nav{padding-left:18px}}
+
+/* hero */
+.hero{padding:140px 0 72px;overflow:hidden}
+.hero::before,.hero::after{content:"";position:absolute;border-radius:50%;filter:blur(90px);opacity:.28;pointer-events:none;z-index:0}
+.hero::before{width:380px;height:380px;background:var(--cyan);top:-80px;left:-140px}
+.hero::after{width:380px;height:380px;background:var(--violet);top:120px;right:-160px}
+.hero .wrap{position:relative;z-index:1}
+.hero h1{font-size:clamp(2.6rem,10.5vw,5.6rem);margin-bottom:20px;max-width:14ch}
+.hero p.lead{font-size:1.15rem;margin-bottom:30px}
+.cta-row{display:flex;flex-direction:column;gap:12px}
+@media(min-width:520px){.cta-row{flex-direction:row}}
+.stats{display:grid;grid-template-columns:1fr;gap:12px;margin-top:56px}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:20px 22px}
+.stat b{display:block;font:700 2rem/1.1 var(--head)}
+.stat span{color:var(--muted);font-size:.92rem}
+@media(min-width:640px){.stats{grid-template-columns:repeat(3,1fr)}}
+
+/* cards */
+.grid{display:grid;gap:14px;margin-top:40px}
+@media(min-width:640px){.grid.c2,.grid.c4,.grid.c3{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:980px){.grid.c4{grid-template-columns:repeat(4,1fr)}.grid.c3{grid-template-columns:repeat(3,1fr)}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:26px;position:relative;transition:border-color .25s,transform .25s}
+.card:hover{border-color:rgba(46,200,242,.45);transform:translateY(-3px)}
+.card h3{font-size:1.25rem;margin:14px 0 8px}
+.card p{color:var(--muted);font-size:.97rem}
+.ico{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;background:linear-gradient(135deg,rgba(46,200,242,.16),rgba(123,92,240,.16));border:1px solid var(--line)}
+.ico svg{width:22px;height:22px;stroke:var(--cyan);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.alt{background:var(--bg2);border-block:1px solid var(--line)}
+
+/* steps */
+.steps{counter-reset:s;display:grid;gap:14px;margin-top:40px}
+@media(min-width:760px){.steps{grid-template-columns:repeat(4,1fr)}}
+.step{padding:26px;border-radius:var(--r);background:var(--card);border:1px solid var(--line);counter-increment:s}
+.step::before{content:"0" counter(s);font:700 2.4rem/1 var(--head);background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.step h3{font-size:1.2rem;margin:14px 0 8px}
+.step p{color:var(--muted);font-size:.95rem}
+
+/* showcase */
+.tabs{display:flex;gap:8px;overflow-x:auto;margin:36px calc(var(--gut)*-1) 0;padding:0 var(--gut) 6px;scrollbar-width:none}
+.tabs::-webkit-scrollbar{display:none}
+.tab{flex:none;min-height:44px;padding:10px 18px;border-radius:999px;border:1px solid var(--line);background:transparent;color:var(--muted);font:500 .95rem var(--body);cursor:pointer;transition:.2s}
+.tab:hover{color:var(--text)}
+.tab[aria-selected=true]{color:#fff;border-color:transparent;background:linear-gradient(var(--card),var(--card)) padding-box,var(--grad) border-box;border:1px solid transparent}
+.panel{margin-top:18px}
+.panel[hidden]{display:none}
+.stage{aspect-ratio:16/10;min-height:220px;border-radius:var(--r);border:1px dashed rgba(255,255,255,.2);background:
+  radial-gradient(circle at 20% 20%,rgba(46,200,242,.12),transparent 55%),radial-gradient(circle at 80% 80%,rgba(123,92,240,.14),transparent 55%),var(--card);
+  display:grid;place-items:center;text-align:center;padding:24px}
+.stage .play{width:64px;height:64px;border-radius:50%;border:1px solid var(--line);display:grid;place-items:center;margin:0 auto 14px;background:rgba(255,255,255,.04)}
+.stage .play svg{width:24px;height:24px;fill:var(--cyan)}
+.stage small{color:var(--muted)}
+.panel h3{font-size:1.3rem;margin:20px 0 6px}
+.panel p{color:var(--muted);max-width:60ch}
+
+/* ways */
+.ways{display:grid;gap:14px;margin-top:40px}
+@media(min-width:760px){.ways{grid-template-columns:1fr 1fr}}
+.way{padding:30px;border-radius:var(--r);background:var(--card);border:1px solid var(--line)}
+.way.feat{background:linear-gradient(var(--card),var(--card)) padding-box,var(--grad) border-box;border:1px solid transparent}
+.way h3{font-size:1.5rem;margin-bottom:8px}
+.way>p{color:var(--muted);margin-bottom:18px}
+.way ul{list-style:none;display:grid;gap:10px}
+.way li{display:flex;gap:10px;font-size:.96rem}
+.way li::before{content:"";flex:none;width:8px;height:8px;border-radius:50%;background:var(--grad);margin-top:.55em}
+
+/* faq */
+.faq{margin-top:36px;display:grid;gap:10px;max-width:780px}
+details{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:0 20px}
+summary{cursor:pointer;list-style:none;padding:18px 28px 18px 0;font:600 1.02rem var(--body);position:relative;min-height:48px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";position:absolute;right:0;top:50%;transform:translateY(-50%);font-size:1.4rem;color:var(--cyan);transition:transform .2s}
+details[open] summary::after{transform:translateY(-50%) rotate(45deg)}
+details p{color:var(--muted);padding-bottom:18px}
+
+/* final cta */
+.final{text-align:center;overflow:hidden}
+.final::before{content:"";position:absolute;inset:auto 0 -200px 0;height:360px;background:radial-gradient(ellipse at center,rgba(123,92,240,.3),transparent 65%);pointer-events:none}
+.final .wrap{position:relative}
+.final h2{max-width:18ch;margin-inline:auto}
+.final .lead{margin:0 auto 32px}
+.wa{display:grid;gap:14px;max-width:760px;margin:0 auto}
+@media(min-width:680px){.wa{grid-template-columns:1fr 1fr}}
+.wa .btn{flex-direction:column;gap:2px;padding:16px 22px;border-radius:20px}
+.wa .btn small{font-weight:400;opacity:.92;font-size:.88rem}
+footer{border-top:1px solid var(--line);padding:30px 0;color:var(--muted);font-size:.88rem}
+footer .wrap{display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(18px);transition:opacity .6s,transform .6s}
+.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}.rv{opacity:1;transform:none}}
+@media(min-width:900px){section{padding:104px 0}}
+</style>
+</head>
+<body>
+
+<header class="nav" role="banner">
+  <a class="brand" href="#top" aria-label="Vintage Tech Solutions home"><img src="assets/vts-mark-96.webp" alt="" width="32" height="32"><span>VTS</span></a>
+  <ul>
+    <li><a href="#how">How we build</a></li>
+    <li><a href="#agents">Agents</a></li>
+    <li><a href="#showcase">Showcase</a></li>
+    <li><a href="#faq">FAQ</a></li>
+  </ul>
+  <a class="btn btn-primary" href="#contact">Build my agent</a>
+</header>
+
+<main id="top">
+
+<section class="hero">
+  <div class="wrap">
+    <span class="eyebrow">AI Agent Factory · Karachi</span>
+    <h1>We build AI agents that <span class="grad">work.</span></h1>
+    <p class="lead">Vintage Tech Solutions designs, builds and runs AI agents that take the repetitive work off your team, so your business keeps moving while you focus on growth.</p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="#contact">Build my agent</a>
+      <a class="btn btn-ghost" href="#agents">See our agents</a>
+    </div>
+    <div class="stats">
+      <div class="stat"><b class="grad">50+</b><span>automations shipped</span></div>
+      <div class="stat"><b class="grad">24/7</b><span>agents that never clock out</span></div>
+      <div class="stat"><b class="grad">$50</b><span>as low as $50 a month</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="alt" id="problem">
+  <div class="wrap">
+    <span class="eyebrow">The problem</span>
+    <h2>Busy teams lose money in small ways.</h2>
+    <p class="lead">Nobody plans to drop the ball. It happens when the boring work piles up.</p>
+    <div class="grid c4">
+      <article class="card rv"><div class="ico"><svg viewBox="0 0 24 24"><path d="M12 2c3 4 6 6.5 6 11a6 6 0 0 1-12 0c0-2 1-3.5 2-5 1 1 1.5 2 2 2 0-3 .5-5 2-8z"/></svg></div><h3>Leads go cold</h3><p>Enquiries wait hours for a reply and the customer moves on to someone faster.</p></article>
+      <article class="card rv"><div class="ico"><svg viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/><path d="M16 3l5 5M21 3l-5 5"/></svg></div><h3>Missed calls</h3><p>Calls after hours or during rush time go unanswered, and unanswered calls rarely call back.</p></article>
+      <article class="card rv"><div class="ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l3 2M9 2h6"/></svg></div><h3>Wasted hours</h3><p>Skilled people spend their day copying data, chasing updates and sorting inboxes.</p></article>
+      <article class="card rv"><div class="ico"><svg viewBox="0 0 24 24"><path d="M12 3l10 18H2L12 3z"/><path d="M12 10v5M12 18h.01"/></svg></div><h3>Costly errors</h3><p>Manual entry means typos, missed invoices and mistakes that cost real money to fix.</p></article>
+    </div>
+  </div>
+</section>
+
+<section id="how">
+  <div class="wrap">
+    <span class="eyebrow">How we build</span>
+    <h2>From busywork to a working agent.</h2>
+    <p class="lead">A simple, repeatable process. You always know what is being built and why.</p>
+    <div class="steps">
+      <div class="step rv"><h3>Map the boring work</h3><p>We sit with your team and find the repetitive tasks that eat the most time.</p></div>
+      <div class="step rv"><h3>Design the agent</h3><p>We define what it does, which tools it uses and when it hands over to a human.</p></div>
+      <div class="step rv"><h3>Build and test</h3><p>We build it and test it on real scenarios from your business before it goes live.</p></div>
+      <div class="step rv"><h3>Deploy and watch</h3><p>We launch it, monitor how it performs and keep improving it as you grow.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="alt" id="agents">
+  <div class="wrap">
+    <span class="eyebrow">Agents</span>
+    <h2>Pick an agent. Or ask for a custom one.</h2>
+    <p class="lead">Each agent is built around your tools, your process and your tone.</p>
+    <div class="grid c3">
+      <article class="card rv"><div class="ico"><svg viewBox="0 0 24 24"><path d="M21 12a9 9 0 0 1-13.4 7.8L3 21l1.3-4.4A9 9 0 1 1 21 12z"/></svg></div><h3>WhatsApp Lead Agent</h3><p>Replies to new enquiries instantly, qualifies them and passes the hot ones to your team.</p></article>
+      <article class="card rv"><div class="ico"><svg viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg></div><h3>AI Receptionist</h3><p>Answers calls, handles common questions, books appointments and takes messages.</p></article>
+      <article class="card rv"><div class="ico"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></div><h3>Inbox Assistant</h3><p>Sorts email, drafts replies for your approval and flags what truly needs you.</p></article>
+      <article class="card rv"><div class="ico"><svg viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-8M22 20H2"/></svg></div><h3>Finance Back-Office</h3><p>Captures invoices and receipts, matches records and keeps your books tidy.</p></article>
+      <article class="card rv"><div class="ico"><svg viewBox="0 0 24 24"><path d="M3 12h13M12 6l6 6-6 6M21 4v16"/></svg></div><h3>Sales Follow-up</h3><p>Nudges every prospect at the right time so no deal dies from silence.</p></article>
+      <article class="card rv"><div class="ico"><svg viewBox="0 0 24 24"><circle cx="6" cy="6" r="3"/><circle cx="18" cy="18" r="3"/><path d="M9 6h4a3 3 0 0 1 3 3v6"/></svg></div><h3>Ops and HR Workflows</h3><p>Automates onboarding, approvals, scheduling and the paperwork between teams.</p></article>
+    </div>
+  </div>
+</section>
+
+<section id="showcase">
+  <div class="wrap">
+    <span class="eyebrow">Showcase</span>
+    <h2>See the agents in action.</h2>
+    <p class="lead">Demo videos are on the way. Pick a tab to preview what each one does.</p>
+
+    <div class="tabs" role="tablist" aria-label="Agent demos">
+      <button class="tab" role="tab" id="t1" aria-controls="p1" aria-selected="true">AI Receptionist</button>
+      <button class="tab" role="tab" id="t2" aria-controls="p2" aria-selected="false" tabindex="-1">Inbox Assistant</button>
+      <button class="tab" role="tab" id="t3" aria-controls="p3" aria-selected="false" tabindex="-1">WhatsApp Lead Bot</button>
+      <button class="tab" role="tab" id="t4" aria-controls="p4" aria-selected="false" tabindex="-1">Kitchen OS</button>
+    </div>
+
+    <div class="panel" role="tabpanel" id="p1" aria-labelledby="t1">
+      <div class="stage"><div><div class="play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div><small>Demo video coming soon</small></div></div>
+      <h3>AI Receptionist</h3><p>Picks up every call, answers questions and books the appointment while your team stays focused.</p>
+    </div>
+    <div class="panel" role="tabpanel" id="p2" aria-labelledby="t2" hidden>
+      <div class="stage"><div><div class="play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div><small>Demo video coming soon</small></div></div>
+      <h3>Inbox Assistant</h3><p>Reads, sorts and drafts so your inbox stops being a second job.</p>
+    </div>
+    <div class="panel" role="tabpanel" id="p3" aria-labelledby="t3" hidden>
+      <div class="stage"><div><div class="play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div><small>Demo video coming soon</small></div></div>
+      <h3>WhatsApp Lead Bot</h3><p>Replies to new leads in seconds, asks the right questions and hands warm leads to your team.</p>
+    </div>
+    <div class="panel" role="tabpanel" id="p4" aria-labelledby="t4" hidden>
+      <div class="stage"><div><div class="play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div><small>Demo video coming soon</small></div></div>
+      <h3>Kitchen OS</h3><p>An agent-powered operating layer for kitchens and food businesses.</p>
+    </div>
+  </div>
+</section>
+
+<section class="alt" id="ways">
+  <div class="wrap">
+    <span class="eyebrow">Work with us</span>
+    <h2>Two ways to work with us.</h2>
+    <div class="ways">
+      <div class="way feat rv">
+        <h3>Done for you</h3>
+        <p>We handle everything. You describe the problem, we deliver a working agent.</p>
+        <ul><li>We map, design, build and test</li><li>We deploy and monitor it</li><li>You get results without the technical work</li></ul>
+      </div>
+      <div class="way rv">
+        <h3>Done with you</h3>
+        <p>We build alongside your team and teach them to run and grow it.</p>
+        <ul><li>Shared workshops and hands-on builds</li><li>Your team learns the process</li><li>You keep the know-how in-house</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap">
+    <span class="eyebrow">FAQ</span>
+    <h2>Quick answers.</h2>
+    <div class="faq">
+      <details><summary>What is an AI agent?</summary><p>A piece of software that takes a task, uses your tools and gets it done, such as replying to a lead or sorting an invoice, with a human stepping in when it matters.</p></details>
+      <details><summary>How much does it cost?</summary><p>Plans start as low as $50 a month. The final price depends on the agent and how much it does. Message us and we will give you a clear quote.</p></details>
+      <details><summary>Do I need technical skills?</summary><p>No. Tell us what slows your team down and we handle the rest. If you prefer to learn, choose Done with you.</p></details>
+      <details><summary>How long does it take?</summary><p>It depends on the scope. We will give you a timeline after we map the work you want automated.</p></details>
+      <details><summary>What if the agent gets something wrong?</summary><p>We test on real scenarios, set clear limits, keep a human in the loop where needed, and keep monitoring after launch.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="alt final" id="contact">
+  <div class="wrap">
+    <span class="eyebrow">Let's talk</span>
+    <h2>Ready to put <span class="grad">AI to work?</span></h2>
+    <p class="lead">Message us on WhatsApp. Tell us what slows your team down and we will tell you if an agent can fix it.</p>
+    <div class="wa">
+      <a class="btn btn-primary" href="https://wa.me/923184832979" target="_blank" rel="noopener">WhatsApp Abdul Yousuf<small>+92 318 4832979</small></a>
+      <a class="btn btn-primary" href="https://wa.me/923362616921" target="_blank" rel="noopener">WhatsApp Ahsan Danish Rind<small>+92 336 2616921</small></a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <span class="brand"><img src="assets/vts-mark-96.webp" alt="" width="28" height="28">Vintage Tech Solutions</span>
+    <span>AI Agent Factory · Karachi, Pakistan</span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  // Showcase tabs
+  var tabs=[].slice.call(document.querySelectorAll('.tab'));
+  function select(t){
+    tabs.forEach(function(x){
+      var on=x===t;
+      x.setAttribute('aria-selected',on);
+      x.tabIndex=on?0:-1;
+      document.getElementById(x.getAttribute('aria-controls')).hidden=!on;
+    });
+    t.focus();
+  }
+  tabs.forEach(function(t,i){
+    t.addEventListener('click',function(){select(t)});
+    t.addEventListener('keydown',function(e){
+      var n=e.key==='ArrowRight'?i+1:e.key==='ArrowLeft'?i-1:e.key==='Home'?0:e.key==='End'?tabs.length-1:null;
+      if(n===null)return;
+      e.preventDefault();select(tabs[(n+tabs.length)%tabs.length]);
+    });
+  });
+  // Scroll reveal
+  var els=document.querySelectorAll('.rv');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){
+      es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}});
+    },{threshold:.12});
+    els.forEach(function(el,i){el.style.transitionDelay=(i%4)*70+'ms';io.observe(el)});
+  }else{els.forEach(function(el){el.classList.add('in')})}
+})();
+</script>
+</body>
+</html>
