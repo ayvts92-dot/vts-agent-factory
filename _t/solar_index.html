@@ -3,9 +3,36 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>BrightSun Solar (Demo) | Rooftop Solar for Karachi Homes & Shops</title>
-<meta name="description" content="Demo website: estimate your solar system size, cost and payback, then message BrightSun Solar on WhatsApp for a free site survey in Karachi.">
+
+<!-- Search -->
+<title>BrightSun Solar Karachi | Rooftop Solar Installers (Demo)</title>
+<meta name="description" content="Demo site: estimate your rooftop solar size, cost and payback in Karachi, then message BrightSun Solar on WhatsApp for a free site survey.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://ayvts92-dot.github.io/solar-demo-site/">
 <meta name="theme-color" content="#0F2742">
+
+<!-- Favicon -->
+<link rel="icon" href="logo.svg" type="image/svg+xml">
+
+<!-- Open Graph (Facebook, WhatsApp, LinkedIn) -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="BrightSun Solar (Demo)">
+<meta property="og:locale" content="en_PK">
+<meta property="og:url" content="https://ayvts92-dot.github.io/solar-demo-site/">
+<meta property="og:title" content="BrightSun Solar Karachi | Rooftop Solar Installers (Demo)">
+<meta property="og:description" content="Demo site: estimate your rooftop solar size, cost and payback in Karachi, then message BrightSun Solar on WhatsApp for a free site survey.">
+<meta property="og:image" content="https://ayvts92-dot.github.io/solar-demo-site/hero-rooftop.webp">
+<meta property="og:image:type" content="image/webp">
+<meta property="og:image:alt" content="Rooftop solar panels installed on a house roof">
+
+<!-- Twitter / X -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="BrightSun Solar Karachi | Rooftop Solar Installers (Demo)">
+<meta name="twitter:description" content="Demo site: estimate your rooftop solar size, cost and payback in Karachi, then message BrightSun Solar on WhatsApp for a free site survey.">
+<meta name="twitter:image" content="https://ayvts92-dot.github.io/solar-demo-site/hero-rooftop.webp">
+
+<meta name="twitter:image:alt" content="Rooftop solar panels installed on a house roof">
+
 <script>document.documentElement.className+=' js';</script>
 <style>
 :root{
@@ -30,13 +57,13 @@ h2{font-size:clamp(1.7rem,4vw,2.4rem);margin-bottom:10px}
 .center{text-align:center}.center .lead{margin-inline:auto}
 .sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 
-
 /* Buttons */
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:13px 24px;border-radius:999px;font-weight:700;font-size:1rem;border:2px solid transparent;cursor:pointer;transition:transform .2s,box-shadow .2s,background .2s;font-family:inherit}
 .btn:hover{transform:translateY(-2px)}
 .btn-primary{background:linear-gradient(135deg,var(--orange),#ff6f1f);color:#fff;box-shadow:0 8px 20px rgba(255,138,31,.35)}
 .btn-primary:hover{box-shadow:0 12px 26px rgba(255,138,31,.45)}
 .btn-wa{background:var(--wa);color:#fff;box-shadow:0 8px 20px rgba(37,211,102,.3)}
+
 .btn-ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.5)}
 .btn-ghost:hover{background:rgba(255,255,255,.1)}
 .btn svg{width:20px;height:20px;fill:currentColor}
@@ -63,13 +90,13 @@ nav a:hover{color:var(--yellow);opacity:1}
 .hero::before{content:"";position:absolute;right:-120px;top:-120px;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(255,201,74,.35),transparent 65%)}
 .hero-grid{display:grid;grid-template-columns:1.05fr 1fr;gap:44px;align-items:center;position:relative}
 .hero h1{color:#fff;font-size:clamp(2.1rem,5.4vw,3.5rem);letter-spacing:-.02em}
-
 .hero h1 span{color:var(--yellow)}
 .hero p{margin:18px 0 28px;font-size:1.1rem;color:#D7E2EE;max-width:520px}
 .hero-cta{display:flex;flex-wrap:wrap;gap:12px}
 .hero-note{margin-top:18px;font-size:.88rem;color:#A9BBCE}
 .hero-visual{position:relative}
 .hero-img{border-radius:24px;overflow:hidden;box-shadow:0 24px 60px rgba(0,0,0,.35);border:4px solid rgba(255,255,255,.12);background:var(--navy-2);aspect-ratio:4/3}
+
 .hero-img img{width:100%;height:100%;object-fit:cover}
 .js .rise{animation:rise .9s var(--ease) both;animation-delay:var(--d,0s)}
 @keyframes rise{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
@@ -96,13 +123,13 @@ nav a:hover{color:var(--yellow);opacity:1}
 @keyframes glowA{0%,24%{opacity:0}34%,86%{opacity:.75}96%,100%{opacity:0}}
 
 /* Marquee */
-
 .marquee{background:linear-gradient(90deg,var(--yellow),#FFD978,var(--yellow));color:var(--navy);overflow:hidden;white-space:nowrap;border-block:1px solid rgba(15,39,66,.08);-webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}
 .marquee-track{display:flex;width:max-content}
 .marquee-track.run{animation:marq var(--dur,30s) linear infinite}
 .marquee:hover .marquee-track{animation-play-state:paused}
 .marquee-group{display:flex;flex:none;align-items:center}
 .marquee-group span{padding:14px 0;font-weight:700;font-size:.95rem;letter-spacing:.02em}
+
 .marquee-group span::after{content:"\00B7";margin:0 22px;color:var(--orange);font-weight:900}
 @keyframes marq{to{transform:translateX(-50%)}}
 
@@ -129,13 +156,13 @@ nav a:hover{color:var(--yellow);opacity:1}
 .res:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
 .res.wide{grid-column:1/-1;background:linear-gradient(135deg,var(--navy),var(--navy-2));color:#fff;border:0}
 .res small{display:block;font-size:.8rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);font-weight:700}
-
 .res.wide small{color:#A9BBCE}
 .res strong{display:block;font-size:1.5rem;color:var(--navy);margin-top:4px;line-height:1.2;font-variant-numeric:tabular-nums;overflow-wrap:anywhere}
 .res.wide strong{color:var(--yellow);font-size:1.9rem}
 .res .tag{display:block;font-size:.82rem;color:#A9BBCE;margin-top:2px}
 .calc-more{grid-column:1/-1;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:20px}
 .calc-more > *{min-width:0}
+
 .panelbox{background:var(--bg);border:1px solid var(--line);border-radius:16px;padding:18px 20px;transition:transform .3s var(--ease),box-shadow .3s var(--ease)}
 .panelbox:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
 .panelbox h3{font-size:1.05rem;margin-bottom:2px}
@@ -162,13 +189,13 @@ nav a:hover{color:var(--yellow);opacity:1}
 
 /* Steps */
 .steps-layout{display:grid;grid-template-columns:1fr 1.2fr;gap:44px;align-items:center}
-
 .photo{border-radius:22px;overflow:hidden;box-shadow:var(--shadow);background:var(--bg);aspect-ratio:4/3}
 .photo img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
 .photo:hover img{transform:scale(1.04)}
 .steps{display:grid;gap:16px;counter-reset:s}
 .step{display:flex;gap:16px;padding:18px;border-radius:16px;border:1px solid var(--line);background:#fff;transition:transform .3s var(--ease),box-shadow .3s var(--ease)}
 .step:hover{transform:translateX(6px);box-shadow:var(--lift)}
+
 .step::before{counter-increment:s;content:counter(s);flex:none;width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,var(--yellow),var(--orange));color:var(--navy);font-weight:800;display:grid;place-items:center}
 .step h3{font-size:1.1rem;margin-bottom:2px}
 .step p{color:var(--muted);font-size:.95rem}
@@ -195,13 +222,13 @@ nav a:hover{color:var(--yellow);opacity:1}
 .benefit{padding:22px;border-radius:18px;border:1px solid var(--line);background:#fff;transition:transform .3s var(--ease),box-shadow .3s var(--ease)}
 .benefit:hover{transform:translateY(-5px);box-shadow:var(--lift)}
 .benefit .ic{width:46px;height:46px;border-radius:14px;background:linear-gradient(135deg,var(--yellow),var(--orange));display:grid;place-items:center;margin-bottom:10px}
-
 .benefit .ic svg{width:24px;height:24px;stroke:var(--navy);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
 .benefit h3{font-size:1.15rem;margin-bottom:4px}
 .benefit p{color:var(--muted);font-size:.95rem}
 
 /* FAQ */
 #faq{background:var(--bg)}
+
 .faq{max-width:820px;margin-inline:auto;display:grid;gap:12px}
 details{background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden;transition:box-shadow .25s,transform .25s}
 details:hover{box-shadow:var(--shadow)}
@@ -228,13 +255,13 @@ details p{padding:0 22px 20px;color:var(--muted)}
 
 /* Footer */
 footer{background:#0A1B2E;color:#A9BBCE;padding:36px 0;font-size:.92rem}
-
 .foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;align-items:center}
 .demo-tag{background:var(--yellow);color:var(--navy);font-weight:800;padding:5px 14px;border-radius:999px;font-size:.8rem}
 
 /* Floating WA (mobile) */
 .fab{position:fixed;right:16px;bottom:16px;z-index:40;width:56px;height:56px;border-radius:50%;background:var(--wa);display:none;place-items:center;box-shadow:0 8px 24px rgba(0,0,0,.3)}
 .fab svg{width:30px;height:30px;fill:#fff}
+
 
 /* Scroll reveal (only hidden when JS is running) */
 .js .reveal{opacity:0;transform:translateY(28px);transition:opacity .8s var(--ease) var(--d,0s),transform .8s var(--ease) var(--d,0s)}
@@ -261,13 +288,13 @@ footer{background:#0A1B2E;color:#A9BBCE;padding:36px 0;font-size:.92rem}
   .calc{padding:20px}
   .results{grid-template-columns:minmax(0,1fr)}
   .form .row{grid-template-columns:1fr}
-
   .hero-cta .btn{width:100%}
   .track{height:170px}
 }
 
 /* Reduced motion: switch every animation off */
 @media (prefers-reduced-motion:reduce){
+
   html{scroll-behavior:auto}
   *,*::before,*::after{animation:none!important;transition:none!important}
   .js .reveal,.js .rise{opacity:1!important;transform:none!important}
@@ -294,15 +321,15 @@ footer{background:#0A1B2E;color:#A9BBCE;padding:36px 0;font-size:.92rem}
         <li><a href="#calculator">Calculator</a></li>
         <li><a href="#how">How it works</a></li>
         <li><a href="#packages">Packages</a></li>
-
         <li><a href="#why">Why solar</a></li>
         <li><a href="#faq">FAQ</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
     <div class="nav-right">
+
       <a class="btn btn-wa" href="https://wa.me/923000000000" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 3.5A11.8 11.8 0 0 0 12 0C5.4 0 .1 5.3.1 11.9c0 2.1.6 4.1 1.6 5.9L0 24l6.4-1.7a11.9 11.9 0 0 0 5.6 1.4C18.600 23.700 24 18.400 24 11.900c0-3.200-1.200-6.200-3.500-8.400zM12 21.600c-1.800 0-3.500-.5-5-1.400l-.4-.2-3.800 1 1-3.700-.2-.4a9.700 9.700 0 0 1-1.500-5c0-5.400 4.400-9.700 9.800-9.700 2.600 0 5 1 6.900 2.800a9.600 9.600 0 0 1 2.800 6.900c0 5.400-4.400 9.700-9.600 9.700zm5.300-7.300c-.3-.1-1.700-.8-2-.9-.3-.1-.5-.1-.7.100-.2.300-.8.900-.9 1.100-.2.200-.3.200-.6.100-.3-.1-1.200-.4-2.300-1.400-.8-.7-1.400-1.700-1.600-2-.2-.3 0-.5.100-.6l.4-.5c.1-.2.200-.3.300-.5.100-.2 0-.4 0-.5l-.9-2.100c-.2-.5-.5-.5-.7-.5h-.6c-.2 0-.5.100-.8.400-.3.300-1 1-1 2.400s1.100 2.800 1.200 3c.1.200 2.100 3.200 5 4.500.7.3 1.300.5 1.700.6.700.2 1.300.2 1.800.1.600-.1 1.700-.7 1.900-1.400.2-.7.200-1.200.2-1.400-.1-.1-.3-.2-.6-.3z"/></svg>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 3.5A11.8 11.8 0 0 0 12 0C5.4 0 .1 5.3.1 11.9c0 2.1.6 4.1 1.6 5.9L0 24l6.4-1.7a11.9 11.9 0 0 0 5.6 1.4C18.600 23.700 24 18.400 24 11.900c0-3.200-1.200-6.200-3.500-8.400zM12 21.600c-1.800 0-3.500-.5-5-1.400l-.4-.2-3.800 1 1-3.700-.2-.4a9.700 9.700 0 0 1-1.500-5c0-5.400 4.400-9.700 9.800-9.700 2.600 0 5 1 6.900 2.800a9.600 9.600 0 0 1 2.800 6.900c0 5.400-4.400 9.700-9.600 9.700zm5.300-7.300c-.3-.1-1.700-.8-2-.9-.3-.1-.5-.1-.7.1-.2.300-.8.900-.9 1.100-.2.200-.3.200-.6.100-.3-.1-1.200-.4-2.300-1.400-.8-.7-1.400-1.700-1.600-2-.2-.3 0-.5.100-.6l.4-.5c.1-.2.200-.3.300-.5.100-.2 0-.4 0-.5l-.9-2.100c-.2-.5-.5-.5-.7-.5h-.6c-.2 0-.5.100-.8.400-.3.300-1 1-1 2.400s1.100 2.800 1.200 3c.1.200 2.100 3.200 5 4.500.7.3 1.300.5 1.700.6.700.2 1.300.2 1.800.1.600-.1 1.700-.7 1.900-1.400.2-.7.200-1.200.2-1.400-.1-.1-.3-.2-.6-.3z"/></svg>
         WhatsApp
       </a>
       <button class="menu-toggle" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="menu">
@@ -327,11 +354,12 @@ footer{background:#0A1B2E;color:#A9BBCE;padding:36px 0;font-size:.92rem}
       <p class="hero-note rise" style="--d:.42s">Demo website. All figures are examples, not offers.</p>
     </div>
 
-
     <div class="hero-visual rise" style="--d:.2s">
       <div class="hero-img">
-        <img src="hero-rooftop.webp" alt="Solar panels installed on a rooftop" width="900" height="675" fetchpriority="high">
+        <!-- Above the fold: loaded first, not lazy -->
+        <img src="hero-rooftop.webp" alt="Rooftop solar panels installed on a house roof" width="900" height="675" fetchpriority="high" decoding="async">
       </div>
+
 
       <!-- Animated scene: sun rays -> panel -> current -> house windows light up -->
       <div class="scene" aria-hidden="true">
@@ -360,12 +388,12 @@ footer{background:#0A1B2E;color:#A9BBCE;padding:36px 0;font-size:.92rem}
             <line x1="35.03" y1="27.03" x2="28.67" y2="20.67"/>
             <line x1="52" y1="20" x2="52" y2="11"/>
             <line x1="68.97" y1="27.03" x2="75.33" y2="20.67"/>
-
           </g>
           <circle cx="52" cy="44" r="17" fill="url(#sunG)"/>
 
           <!-- rays flowing down into the panel -->
           <path class="beam b1" d="M62 62 L96 120"/>
+
           <path class="beam b2" d="M72 56 L124 120"/>
           <path class="beam b3" d="M80 50 L152 120"/>
 
@@ -393,12 +421,12 @@ footer{background:#0A1B2E;color:#A9BBCE;padding:36px 0;font-size:.92rem}
           <rect class="win" x="226" y="148" width="20" height="18" rx="2"/>
           <rect class="win w2" x="264" y="148" width="20" height="18" rx="2"/>
           <rect x="248" y="156" width="14" height="26" rx="2" fill="#0B1F36"/>
-
         </svg>
       </div>
     </div>
   </div>
 </section>
+
 
 <!-- MARQUEE -->
 <div class="marquee" role="region" aria-label="BrightSun highlights">
@@ -426,11 +454,11 @@ footer{background:#0A1B2E;color:#A9BBCE;padding:36px 0;font-size:.92rem}
         </div>
 
         <label for="usage" id="usageLabel">Your monthly electricity bill</label>
-
         <div class="input-wrap"><span id="unitTag">PKR</span><input id="usage" type="number" inputmode="numeric" value="50000"></div>
         <input id="usageRange" type="range" min="10000" max="300000" step="1000" value="50000" aria-label="Usage slider">
         <div class="range-labels"><span id="rangeMin">PKR 10,000</span><span id="rangeMax">PKR 300,000</span></div>
         <p class="hint" id="hint"></p>
+
 
         <span class="lab" id="typeLab">System type</span>
         <div class="seg" role="group" aria-labelledby="typeLab" style="margin-bottom:0">
@@ -459,12 +487,12 @@ footer{background:#0A1B2E;color:#A9BBCE;padding:36px 0;font-size:.92rem}
             <div class="col">
               <div class="track"><div class="bar before" id="barBefore"><span class="val" id="vBefore">-</span></div></div>
               <div class="name">Before solar</div>
-
             </div>
             <div class="col">
               <div class="track"><div class="bar after" id="barAfter"><span class="val" id="vAfter">-</span></div></div>
               <div class="name">After solar</div>
             </div>
+
           </div>
         </div>
         <div class="panelbox y25">
@@ -492,12 +520,12 @@ footer{background:#0A1B2E;color:#A9BBCE;padding:36px 0;font-size:.92rem}
 
 <!-- 4. HOW IT WORKS -->
 <section id="how" class="reveal">
-
   <div class="container steps-layout">
     <div class="photo">
-      <img src="installers.webp" alt="BrightSun installers working on a rooftop solar system" loading="lazy" width="800" height="600">
+      <img src="installers.webp" alt="Technicians installing solar panels on a rooftop" loading="lazy" decoding="async" width="800" height="600">
     </div>
     <div>
+
       <span class="eyebrow">How it works</span>
       <h2>From survey to savings in 4 steps</h2>
       <p class="lead" style="margin-bottom:22px">Simple, clear, and no pressure.</p>
@@ -525,12 +553,12 @@ footer{background:#0A1B2E;color:#A9BBCE;padding:36px 0;font-size:.92rem}
         <p class="for">Small homes and shops</p>
         <div class="price"><small>Example price</small>PKR 800,000 - 1,000,000</div>
         <ul>
-
           <li>About 600 units per month (estimate)</li>
           <li>Roof area needed: roughly 30 to 35 m²</li>
           <li>Inverter, mounting and wiring included</li>
         </ul>
         <a class="btn btn-primary" href="#contact">Ask about 5 kW</a>
+
       </article>
       <article class="card pop reveal">
         <span class="badge">COMMON CHOICE</span>
@@ -558,14 +586,14 @@ footer{background:#0A1B2E;color:#A9BBCE;padding:36px 0;font-size:.92rem}
     </div>
     <p class="pkg-note">Example prices and outputs only (demo). Your final quote depends on your roof, equipment choice and a site survey.</p>
   </div>
-
 </section>
 
 <!-- 6. WHY SOLAR -->
 <section id="why" class="reveal">
   <div class="container why-grid">
+
     <div class="photo">
-      <img src="inverter.webp" alt="Solar inverter installed on a wall" loading="lazy" width="800" height="600">
+      <img src="inverter.webp" alt="Solar inverter mounted on a wall" loading="lazy" decoding="async" width="800" height="600">
     </div>
     <div>
       <span class="eyebrow">Why solar</span>
@@ -591,12 +619,12 @@ footer{background:#0A1B2E;color:#A9BBCE;padding:36px 0;font-size:.92rem}
   </div>
 </section>
 
-
 <!-- 7. FAQ -->
 <section id="faq" class="reveal">
   <div class="container">
     <div class="section-head center">
       <span class="eyebrow">FAQ</span>
+
       <h2>Common questions</h2>
     </div>
     <div class="faq">
@@ -624,12 +652,12 @@ footer{background:#0A1B2E;color:#A9BBCE;padding:36px 0;font-size:.92rem}
   </div>
 </section>
 
-
 <!-- 8. CONTACT -->
 <section id="contact" class="contact reveal">
   <div class="container contact-grid">
     <div>
       <span class="eyebrow">Contact</span>
+
       <h2>Book your free site survey</h2>
       <p class="lead">Tell us a little about your home or shop. We will take it from there on WhatsApp.</p>
       <div class="contact-info">
@@ -657,12 +685,12 @@ footer{background:#0A1B2E;color:#A9BBCE;padding:36px 0;font-size:.92rem}
   <div class="container foot">
     <div><strong style="color:#fff">BrightSun Solar</strong> · Rooftop solar for homes and small shops in Karachi</div>
     <span class="demo-tag">Demo website</span>
-
   </div>
   <div class="container" style="margin-top:12px;font-size:.82rem">Demo only: business, number, prices and estimates are examples and not a real offer.</div>
 </footer>
 
 <a class="fab" href="https://wa.me/923000000000" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+
   <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 3.5A11.8 11.8 0 0 0 12 0C5.4 0 .1 5.3.1 11.9c0 2.1.6 4.1 1.6 5.9L0 24l6.4-1.7a11.9 11.9 0 0 0 5.6 1.4C18.600 23.700 24 18.400 24 11.900c0-3.200-1.200-6.200-3.500-8.400zm-3.200 10.800c-.3-.1-1.700-.8-2-.9-.3-.1-.5-.1-.7.100-.2.300-.8.900-.9 1.100-.2.200-.3.200-.6.100-.3-.1-1.200-.4-2.300-1.400-.8-.7-1.400-1.700-1.600-2-.2-.3 0-.5.100-.6l.4-.5c.1-.2.200-.3.300-.5.100-.2 0-.4 0-.5l-.9-2.100c-.2-.5-.5-.5-.7-.5h-.6c-.2 0-.5.100-.8.400-.3.300-1 1-1 2.400s1.100 2.800 1.200 3c.1.200 2.100 3.200 5 4.500.7.300 1.300.5 1.700.6.700.2 1.300.2 1.800.1.600-.1 1.700-.7 1.900-1.400.2-.7.200-1.200.2-1.400-.1-.1-.3-.2-.6-.3z"/></svg>
 </a>
 
@@ -690,12 +718,12 @@ footer{background:#0A1B2E;color:#A9BBCE;padding:36px 0;font-size:.92rem}
     hybridExtraLossPercent: 5,          // extra loss in hybrid systems (battery charging)
     daysPerMonth: 30,
     panelWatts: 585,                    // watts per panel
-
     minPanels: 4,                       // smallest system the calculator suggests
     coverPercent: 90,                   // share of monthly units the system is sized to cover
 
     /* --- Example prices (PKR) --- */
     ongridPricePerKwLow: 160000,        // on-grid, installed, per kW
+
     ongridPricePerKwHigh: 200000,
     hybridInverterExtraPerKwLow: 20000, // extra per kW for a hybrid inverter
     hybridInverterExtraPerKwHigh: 30000,
@@ -723,12 +751,12 @@ footer{background:#0A1B2E;color:#A9BBCE;padding:36px 0;font-size:.92rem}
   var reduceMQ = window.matchMedia("(prefers-reduced-motion: reduce)");
   function reduced(){ return reduceMQ.matches; }
 
-
   function fmt(n){ return Math.round(n).toLocaleString("en-US"); }
   function pkr(n){
     if(n >= 1000000){ return "PKR " + (n/1000000).toFixed(2) + "M"; }
     return "PKR " + fmt(Math.round(n/1000)*1000);
   }
+
   function signed(n){ return (n < 0 ? "-" : "") + pkr(Math.abs(n)); }
   function yrs(y){ return (Math.round(y*10)/10).toFixed(1); }
   function num1(x){ return (Math.round(x*10)/10).toLocaleString("en-US"); }
@@ -756,12 +784,12 @@ footer{background:#0A1B2E;color:#A9BBCE;padding:36px 0;font-size:.92rem}
   });
   nav.addEventListener("click", function(e){
     if(e.target.tagName === "A"){ nav.classList.remove("open"); btn.setAttribute("aria-expanded","false"); }
-
   });
 
   /* ---------- Scroll reveal (sections + staggered children) ---------- */
   var items = document.querySelectorAll(".reveal");
   if("IntersectionObserver" in window && !reduced()){
+
     items.forEach(function(el){
       if(el.tagName !== "SECTION" && el.tagName !== "FOOTER"){
         var sibs = Array.prototype.filter.call(el.parentNode.children, function(n){ return n.classList.contains("reveal"); });
@@ -789,12 +817,12 @@ footer{background:#0A1B2E;color:#A9BBCE;padding:36px 0;font-size:.92rem}
   /* ---------- Marquee (fills the width, then loops seamlessly) ---------- */
   (function(){
     var track = $("marqueeTrack");
-
     var g = $("marqueeGroup");
     if(!track || !g || reduced()) return;
     var base = g.innerHTML, lastW = 0;
     function build(){
       track.classList.remove("run");
+
       while(track.children.length > 1){ track.removeChild(track.lastChild); }
       g.innerHTML = base;
       var guard = 0;
@@ -823,11 +851,11 @@ footer{background:#0A1B2E;color:#A9BBCE;padding:36px 0;font-size:.92rem}
   var mode = "bill";     // "bill" (PKR) or "units" (kWh)
   var type = "ongrid";   // "ongrid" or "hybrid"
 
-
   var input = $("usage"), range = $("usageRange");
   var out = {
     size: $("rSize"), panels: $("rPanels"), backup: $("rBackup"),
     cost: $("rCost"), pay: $("rPay"), save: $("rSave"), year: $("rYear"),
+
     before: $("vBefore"), after: $("vAfter"), y25: $("rY25"), net: $("rNet")
   };
   var keys = Object.keys(out);
@@ -855,12 +883,12 @@ footer{background:#0A1B2E;color:#A9BBCE;padding:36px 0;font-size:.92rem}
   function ease(t){ return 1 - Math.pow(1 - t, 3); }
 
   /* count-up: animates each number from its current value to the new one */
-
   function tween(el, to, f, dur){
     if(el._raf){ cancelAnimationFrame(el._raf); el._raf = null; }
     if(!dur || reduced()){
       el.textContent = f(to);
       el._cur = to.slice();
+
       return;
     }
     var from = el._cur || to.map(function(){ return 0; });
@@ -888,12 +916,12 @@ footer{background:#0A1B2E;color:#A9BBCE;padding:36px 0;font-size:.92rem}
     liveTimer = setTimeout(function(){ live.textContent = text; }, 700);
   }
 
-
   /* ----- the maths ----- */
   function model(units, hybrid){
     var effPct = S.systemEfficiencyPercent * (hybrid ? (1 - S.hybridExtraLossPercent/100) : 1);
     var perKw = S.peakSunHours * (effPct/100) * S.daysPerMonth;   // units per kW per month
     var target = units * S.coverPercent/100;                      // units we aim to cover
+
     var panels = Math.max(S.minPanels, Math.ceil(target / perKw * 1000 / S.panelWatts - 1e-9));
     var kw = panels * S.panelWatts / 1000;
 
@@ -921,12 +949,12 @@ footer{background:#0A1B2E;color:#A9BBCE;padding:36px 0;font-size:.92rem}
       repl += batt * (S.batteryPricePerKwhLow + S.batteryPricePerKwhHigh) / 2;
     }
 
-
     return {
       kw: kw, panels: panels, batt: batt, cLow: cLow, cHigh: cHigh,
       monthlySave: monthlySave, yearlySave: yearlySave,
       billBefore: billBefore, billAfter: billAfter,
       payLow: cLow / yearlySave, payHigh: cHigh / yearlySave,
+
       gross: gross, net: gross - mid - repl
     };
   }
@@ -955,11 +983,11 @@ footer{background:#0A1B2E;color:#A9BBCE;padding:36px 0;font-size:.92rem}
     var units = getUnits();
     var billEq = units * S.ratePerUnit;
 
-
     typeTag.textContent = hybrid ? "Hybrid with batteries (backup, costs more)" : "On-grid (cheaper, no backup)";
 
     if(!(billEq >= 1000)){
       hint.textContent = "Enter your monthly " + (mode === "bill" ? "bill" : "units") + " to see an estimate.";
+
       resetResults();
       return;
     }
@@ -987,12 +1015,12 @@ footer{background:#0A1B2E;color:#A9BBCE;padding:36px 0;font-size:.92rem}
     });
 
     barBefore.style.height = "100%";
-
     barAfter.style.height = Math.max(2, (m.billAfter / m.billBefore) * 100) + "%";
 
     var T = {
       size: F.size(fin.size), panels: F.panels(fin.panels), backup: F.backup(fin.backup),
       cost: F.cost(fin.cost), pay: F.pay(fin.pay), save: F.save(fin.save),
+
       before: F.before(fin.before), after: F.after(fin.after),
       y25: F.y25(fin.y25), net: F.net(fin.net)
     };
@@ -1020,12 +1048,12 @@ footer{background:#0A1B2E;color:#A9BBCE;padding:36px 0;font-size:.92rem}
       input.value = newMode === "units"
         ? Math.round(cur / S.ratePerUnit / 10) * 10
         : Math.round(cur * S.ratePerUnit / 100) * 100;
-
     } else if(!(cur > 0)){
       input.value = newMode === "bill" ? S.defaultBill : Math.round(S.defaultBill / S.ratePerUnit / 10) * 10;
     }
     mode = newMode;
     range.min = cfg.min; range.max = cfg.max; range.step = cfg.step;
+
     input.step = cfg.step;
     range.value = clamp(parseFloat(input.value) || cfg.min, cfg.min, cfg.max);
     $("usageLabel").textContent = mode === "bill" ? "Your monthly electricity bill" : "Your monthly electricity use";
@@ -1053,12 +1081,12 @@ footer{background:#0A1B2E;color:#A9BBCE;padding:36px 0;font-size:.92rem}
   });
   typeBtns.forEach(function(b){
     b.addEventListener("click", function(){
-
       var t = b.getAttribute("data-type");
       if(t === type) return;
       firstPlayed = true;
       type = t;
       setPressed(typeBtns, "data-type", t);
+
       calc(450);
     });
   });
@@ -1086,12 +1114,12 @@ footer{background:#0A1B2E;color:#A9BBCE;padding:36px 0;font-size:.92rem}
     var list = [
       "Average electricity rate: " + strong("PKR " + S.ratePerUnit + " per unit (kWh)") + ", including taxes and charges. If you enter units, the bill is worked out at this rate.",
       "Sun and output: " + strong(S.peakSunHours + " peak sun hours per day") + " at " + strong(effOn + "% system efficiency") + ", so about " + num1(perDay) + " units per kW per day (" + num1(perMonth) + " per month, " + S.daysPerMonth + "-day month). Hybrid systems lose " + S.hybridExtraLossPercent + "% more when charging batteries (about " + num1(perMonthHyb) + " units per kW per month).",
-
       "Panels: " + strong(S.panelWatts + " W") + " each. System size is the number of panels times " + S.panelWatts + " W, with a minimum of " + S.minPanels + " panels.",
       "Sizing: the system is sized to cover about " + strong(S.coverPercent + "%") + " of your monthly units. Savings are counted on that share only, with no credit assumed for extra exported units.",
       "On-grid price: " + strong("PKR " + fmt(S.ongridPricePerKwLow) + " to " + fmt(S.ongridPricePerKwHigh) + " per kW") + " installed (example range). On-grid systems have no backup and switch off during a grid power cut.",
       "Hybrid price: the on-grid price plus " + strong("PKR " + fmt(S.hybridInverterExtraPerKwLow) + " to " + fmt(S.hybridInverterExtraPerKwHigh) + " per kW") + " for a hybrid inverter, plus an example battery of " + strong(S.batteryKwhPerKw + " kWh per kW") + " of solar at " + strong("PKR " + fmt(S.batteryPricePerKwhLow) + " to " + fmt(S.batteryPricePerKwhHigh) + " per kWh") + ". Batteries give backup power but are not counted as extra bill savings, so payback is longer.",
       S.years + "-year savings: panel output is assumed to drop " + strong(S.panelDegradationPercentPerYear + "% per year") + " and the electricity rate is assumed " + escText + ". The net figure subtracts the mid-range system cost and replacing the inverter in year " + S.inverterReplaceYear + " (example PKR " + fmt(S.inverterReplaceCostPerKw) + " per kW), plus the batteries in year " + S.batteryReplaceYear + " for hybrid. Cleaning and maintenance costs are not included.",
+
       strong("These are estimates, not a quote.") + " Real results depend on your roof, shading, tariff, net metering approval, and equipment prices on the day."
     ];
     $("assumpList").innerHTML = list.map(function(t){ return "<li>" + t + "</li>"; }).join("");
@@ -1119,12 +1147,12 @@ footer{background:#0A1B2E;color:#A9BBCE;padding:36px 0;font-size:.92rem}
       entries.forEach(function(en){
         if(en.isIntersecting){ playFirst(); cio.disconnect(); }
       });
-
     }, {threshold:.3});
     cio.observe(calcSec);
   }
 
   /* ---------- Quote form -> WhatsApp ---------- */
+
   var form = $("quoteForm");
   function show(id, bad){ $(id).style.display = bad ? "block" : "none"; }
   form.addEventListener("submit", function(e){
